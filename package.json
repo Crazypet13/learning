@@ -1,13 +1,14 @@
 {
-  "name": "javascript",
+  "name": "csacsi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dzsészön.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+     "sajt": "mkdir lofasz",
     "start": "node main2"
+
   },
-  "keywords": [],
+  "keywords": ["CSAAACSIII"],
   "author": "",
   "license": "ISC"
 }
