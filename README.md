@@ -15,7 +15,7 @@ minden fajta kocka foglalkozásnál (tesztelő, fejlesztő stb.) (nagyjából az
  * senior (érett -ezt csak én mondom am :D)
  * lead (vezető (DE NEM FŐNÖK!, ugyanis olyan igazi "főnöki rang" IT-ban nem igazán létezik...szerencsére...)(azonban nyílván vannak feletted álló emberek, akiknek be kell számolni a teljesítményedről, de szószerint nincs főnök.. bár attól még nem szólunk be senkinek szó szerint :D, erre is meg vannak a frankó hatékony IT-s elintézési módok, de azokról később)
  * architect (tervező)
- * chef (atyaúristen -ezt csak én mondom am :D)
+ * chief (atyaúristen -ezt csak én mondom am :D)
 
 ## 1.  Software development processes (`Szoftver fejlesztési módszertanok` [- Bővebben](https://en.wikipedia.org/wiki/Software_development_process))
 Vagyis: hogy szervezzük a munkánk?
@@ -64,10 +64,10 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
     * A folyamatban előforduló **Eventek**:
         * `Stand-up` : disznók rövid napi jelentése (a sprint közben): mit csináltam, mit fogok ma csinálni, van -e valami blokkolóm / kérdésem
         0. `Kick-off meeting`: (csak a disznók Leadjei vesznek részt ezen a meetingen) (a sprint indításának időpontja előtt tartják meg) Itt, a product owner által megfogalmazott vázlatos feladatokból(`epic`): épkézláb/feldarabolt/kisebb megvalósítható al-feladatokat (`storykat`, vagy a még részletesebb `sub-taskokat`) faragnak: feljegyzik az adott feladathoz a követelményt, az esetleges buktatókat, sőt sokszor még elkészítési ötletekkel is kiegészítik. (De hol vannak ezek az epic-ek/story-k/sub-task-ok(=ticketek)? ezt egy programban tároljuk, később ezt is majd ismertetjük, egyelőre elég ha úgy képzeled el, hogy egy táblán sok cetli van, amire feladatok vannak írva)
-        1. `Grooming` : (minden disznó részt vesz) (A sprint indításának időpontja előtt történik meg) A taskok "nehézségének" (komplexitás + monotonitás) megbecslése (fibonacchi-számok: 1-2-3-5-8-13 stb. és /vagy t-shirt size-ok: s,m,l,xl -mértékkel)(majd ilyet is csinálunk egyet :) ).
+        1. `Grooming` : (minden disznó részt vesz) (A sprint indításának időpontja előtt történik meg) A taskok "nehézségének" (komplexitás + monotonitás) megbecslése (fibonacci-számok: 1-2-3-5-8-13 stb. és /vagy t-shirt size-ok: s,m,l,xl -mértékkel)(majd ilyet is csinálunk egyet :) ).
         2. `Planning` :  A taskok szétosztása az emberek közt. Majd a sprint elindítása.(itt fontos megjegyezni, hogy a csapatban nincs főnök, nem ő adja a taskokat az emberkenek, hanem a csapat közösen gondolkozva szétosztja maguk között (pl valakit az egyik téma jobban érdekel stb...nyílván van olyan dolog ami nem logikus és akkor inkább másnak lesz az adott feladat megszavazva, de elég laza ez így)
         3. `Demo`: A sprint végén az elkészült taskok bemutatása a product ownernek / customernek (Józsibácsinak) is akár
-        4. `Retro` : Visszatekintés a sprintre (hogy a következőt méghatékonyabban lehessen csinálni és a jószokásokat megtartani): Javítási ötletek összeszedése, egymás buksijának simizése:D. Tipikusan egy 3 oszlopbol álló táblázatba szedjük össze az elmúlt sprintben történt dolgok által kiváltott véleményeket: mi ment jól(what went well) | min kellene javítani (improveable)| hogyan javítsunk rajta tervek (fixes/improvement ideas). Ilyenkor optimistán próbálunk hozzáállni, nem a verekedés/egymásra mutogatás (pl egy task nem készült el) a célja ennek. Mert mindent meg lehet oldani okosan is.  És mindennek van oka, és a következő sprintben figyelve ezekre sokkal jobb eredményt fogunk tudni kihozni a csapatból :)
+        4. `Retro` : Visszatekintés a sprintre (hogy a következőt méghatékonyabban lehessen csinálni és a jószokásokat megtartani): Javítási ötletek összeszedése, egymás buksijának simizése:D. Tipikusan egy 3 oszlopbol álló táblázatba szedjük össze az elmúlt sprintben történt dolgok által kiváltott véleményeket: mi ment jól(what went well) | min kellene javítani (improveable)| hogyan javítsunk rajta tervek (action item). Ilyenkor optimistán próbálunk hozzáállni, nem a verekedés/egymásra mutogatás (pl egy task nem készült el) a célja ennek. Mert mindent meg lehet oldani okosan is.  És mindennek van oka, és a következő sprintben figyelve ezekre sokkal jobb eredményt fogunk tudni kihozni a csapatból :)
   * `Kanban`[ - Bővebben](https://en.wikipedia.org/wiki/Kanban_(development))
 
     * Hasonlít a scrumhoz a résztvevők esetében.
@@ -119,9 +119,9 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
 * x%3
 
 ### Egy résztvevős műveletek
-* ++x
+* ++x (jelentése: x = x+1 és ezzel megy tovább a program azznnal abba a ciklusba)
 * x++ (jelentése: x = x+1)
-* \--x
+* --x
 * x-- (jelentése: x = x-1)
 
 ### Értékadás
@@ -145,6 +145,8 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
  * x&&y
  * x||y
  * !x
+ * !(x&&y) = (!x)||(!y)
+
 
  ## Elborult, józan emberek által soha nem használt kifejezések [Bővebben](https://www.programiz.com/java-programming/bitwise-operators)
  * x&y
