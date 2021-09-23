@@ -145,7 +145,8 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
  * x&&y
  * x||y
  * !x
- * !(x&&y) = (!x)||(!y)
+ * !(x&&y) = (!x)||(!y) bull shit
+
 
 
  ## Elborult, józan emberek által soha nem használt kifejezések [Bővebben](https://www.programiz.com/java-programming/bitwise-operators)
@@ -158,8 +159,8 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
  * x>>>2
 
  ### Undormányok :D (avagy minden egyéb kirkszkraksz)
- * (x<3)? y: z (conditional operator)
- * (x<3)?:z  (Elvis operátor:    ?: ez olyan mint Elvis haja két szemmel)
+ * (x<3)? y : z (conditional operator)
+ * (x<3)?: z  (Elvis operátor:    ?: ez olyan mint Elvis haja két szemmel)
  * mikor használom a ()-t és mikor a {} és mikor a []-t?!?
    * () - függvény
    * {} - blokk belseje
@@ -184,7 +185,7 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
  * console.log()
  * // és /*  */ kommentelés
  * erősen/gyengén típusosság fogalma
- * es6, es7 stb javascript verziók
+ * es=echma script -> es6, es7 stb javascript verziók
  * hoisting (var a file elején deklaráltnak számít undefined értékkel)
  * string-template
  * műveleti jelek (operator) típusok, a benne szereplő elemek darabszámától függően:
@@ -193,7 +194,7 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
    * ternary (3 változó): csak egy van ilyen, mégpedig a : (x<3)? y: z
 
 ## Terminal/ command line / console parancsok
- * cd x (cnahge directory) -enter to x  subfolder if exsists
+ * cd x (change directory) -enter to x  subfolder if exsists
  * cd .. (1 mappával feljebb/kijjebb jön)
  * mkdir x (make x directory)
 
