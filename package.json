@@ -5,7 +5,7 @@
   "main": "dzsészön.js",
   "scripts": {
      "sajt": "mkdir lofasz",
-    "start": "node main5"
+    "start": "node logicGates"
 
   },
   "keywords": ["CSAAACSIII"],
