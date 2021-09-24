@@ -4,11 +4,16 @@
   "description": "",
   "main": "dzsészön.js",
   "scripts": {
-     "sajt": "mkdir lofasz",
-    "start": "node hW2"
-
+    "sajt": "mkdir lofasz",
+    "start": "node hW2",
+    "function": "node func"
   },
-  "keywords": ["CSAAACSIII"],
+  "keywords": [
+    "CSAAACSIII"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-promise": "^1.0.5"
+  }
 }
