@@ -11,10 +11,14 @@ function randomNumber(min, max) {
 let kezdoKez = (parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 let bank =(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 
-const draw = function(card = (parseInt(randomNumber(1,11)+kezdoKez))){
- };
+const rand = function(pull(parseInt(randomNumber(1,11)){
+  
+}
 
- 
+const draw = function(card = (kezdoKez))){
+ };
+draw(card)
+
 //kezdoKez=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 //bank=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 
