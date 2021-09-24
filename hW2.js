@@ -8,17 +8,17 @@ function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
   }
 
-let kezdoKez = [];
-let bank =[];
+let kezdoKez = (parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
+let bank =(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 
 let draw = function(card){
-  console.log()
+  console.log(card)
  };
- const card = (parseInt(randomNumber(1,11)))
+ const card = (parseInt(randomNumber(1,11)+kezdoKez))
 
 
-kezdoKez=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
-bank=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
+//kezdoKez=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
+//bank=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 
 
 
@@ -30,4 +30,4 @@ rl.question( function (answer) {
 switch (answer){
   case "yes":console.log("you have",parseInt(randomNumber(1,11))+kezdoKez)
 }});
-console.log(card);
+draw
