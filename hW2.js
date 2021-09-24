@@ -7,15 +7,27 @@ const rl = readline.createInterface({
 function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
   }
-let kezdoKez = []
+let draw = function(card){
+ console.log(${card});
+};
+const card = (parseInt(randomNumber(1,11)+kezdoKez))
+
+let kezdoKez = [];
+let bank =[];
+
+
 
 kezdoKez=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
+bank=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
+
 
 
 console.log("hello you have  "+kezdoKez+"  in your hand");
-console.log("do you want to pull more?")
-console.log("yes/no")
+console.log("i have "+bank);
+console.log("do you want to pull more?");
+console.log("yes/no");
 rl.question( function (answer) {
 switch (answer){
   case "yes":console.log("you have",parseInt(randomNumber(1,11))+kezdoKez)
 }});
+draw
