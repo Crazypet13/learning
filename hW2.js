@@ -12,7 +12,7 @@ let kezdoKez = (parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 let bank =(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 
 let draw = function(card){
-  console.log(card)
+  return card;
  };
  const card = (parseInt(randomNumber(1,11)+kezdoKez))
 
@@ -30,3 +30,4 @@ rl.question( function (answer) {
 switch (answer){
   case "yes":console.log("you have",parseInt(randomNumber(1,11))+kezdoKez)
 }});
+console.log(card)
