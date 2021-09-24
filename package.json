@@ -5,7 +5,7 @@
   "main": "dzsészön.js",
   "scripts": {
     "sajt": "mkdir lofasz",
-    "start": "node hW2",
+    "start": "node fBullshit",
     "function": "node func"
   },
   "keywords": [
