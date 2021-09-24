@@ -18,35 +18,32 @@ let pullBank = () => {
 function card(min, max) {
   return parseInt(Math.random() * (max - min) + min);
 }
-function kerdes() {
-rl.questionAsync("szeretnél kártyát?  y/n").then((a) => {
-    console.log(a);
-    if (a === "y") {
-      pullHand();
-      console.log("neked van " + hand + " kártyád");
-      if (hand >= 21) {
-        console.log("Vesztettél");
-        theEnd = true;
-        return true;
-      } else {
-        theEnd = false;
-        return false
-      }
-    } else {
-      theEnd = true;
-      return false
-    }
-  })
+async function kerdes(){
+ await rl.questionAsync("szeretnél kártyát?  y/n");
 }
+
 pullHand();
 pullHand();
 pullBank();
 pullBank();
 console.log("neked van " + hand + " kártyád");
 console.log(`nekem van ${bank} kártyám`);
-for (let katica = 1;katica <=5;katica++) {
-    kerdes();
-}
+kerdes().then(async(a)=>{
+  console.log(a);
+  if (a === "y") {
+    pullHand();
+    console.log("neked van " + hand + " kártyád");
+    if (hand >= 21) {
+      console.log("Vesztettél");
+      theEnd = true;
+    } else {
+      theEnd = false;
+      await kerdes();
+    }
+  } else {
+    theEnd = true;
+  }
+})
 
 /*console.log("hello you have  "+kezdoKez+"  in your hand");
 console.log("i have "+bank);
