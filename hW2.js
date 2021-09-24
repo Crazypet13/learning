@@ -14,6 +14,8 @@ kezdoKez=(parseInt(randomNumber(1,11))+parseInt(randomNumber(1,11)));
 
 console.log("hello you have  "+kezdoKez+"  in your hand");
 console.log("do you want to pull more?")
-
-rl.question("y/n      ", function(answer){
-})
+console.log("yes/no")
+rl.question( function (answer) {
+switch (answer){
+  case "yes":console.log("you have",parseInt(randomNumber(1,11))+kezdoKez)
+}});
