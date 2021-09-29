@@ -4,87 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Számológép</title>
-    <style>
-        #keret {
-            border: 10px solid black;
-            width: 500px;
-            height: 850px;
-        }
-        #eredmenyJelzo {
-            border: 5px solid black;
-            margin-left: 45px;
-            margin-right: 50px;
-            margin-top: 10px;
-            width: 400px;
-            height: 50px;
-        }
-        #gombok{
-            background-color: #00FF00;
-            width: 390px;
-            height: 480px;
-            margin-top: 280px;
-            margin-left:10px;
-        }
-        .numbers {
-            border: 1px solid magenta;
-            width: 125px;
-            height: 120px;
-            font-size: 50px;
-            margin:auto;
-        }
-        #theZero{
-            border: 1px solid magenta;
-            width: 390px;
-            height: 120px;
-            font-size: 50px;
-        }
-        #muvelet{
-            background-color: mediumblue;
-            width:100px;
-            height:760px;
-        }
-        [flex="box"] {
-            display: flex;
-        }
-        .arithm{
-            border: 1px solid magenta;
-            width: 100px;
-            height: 152px;
-            font-size: 50px;
-        }
-    </style>
-    <script>
-        function clickone(valami) {
-            console.log(valami);
-        }
+    <link rel="stylesheet" href="style.css" />
+    <script src="calculator.js">
+       
     </script>
 </head>
+
 <body>
     <div id="keret">
         <div id="eredmenyJelzo">
         </div>
-    <div flex="box">
-        <div id="gombok">
-            <input class="numbers" type="button" value="1" onClick="clickone(1)" />
-            <input class="numbers" type="button" value="2" onClick="clickone(2)" />
-            <input class="numbers" type="button" value="3" onClick="clickone(3)" />
-            <input class="numbers" type="button" value="4" onClick="clickone(4)" />
-            <input class="numbers" type="button" value="5" onClick="clickone(5)" />
-            <input class="numbers" type="button" value="6" onClick="clickone(6)" />
-            <input class="numbers" type="button" value="7" onClick="clickone(7)" />
-            <input class="numbers" type="button" value="8" onClick="clickone(8)" />
-            <input class="numbers" type="button" value="9" onClick="clickone(9)" />
-            <input id="theZero" type="button" value="0" onClick="clickone(0)" />
+        <div flex="box">
+            <div id="gombok">
+                <input class="numbers" type="button" value="1" onClick="clickone(1)" />
+                <input class="numbers" type="button" value="2" onClick="clickone(2)" />
+                <input class="numbers" type="button" value="3" onClick="clickone(3)" />
+                <input class="numbers" type="button" value="4" onClick="clickone(4)" />
+                <input class="numbers" type="button" value="5" onClick="clickone(5)" />
+                <input class="numbers" type="button" value="6" onClick="clickone(6)" />
+                <input class="numbers" type="button" value="7" onClick="clickone(7)" />
+                <input class="numbers" type="button" value="8" onClick="clickone(8)" />
+                <input class="numbers" type="button" value="9" onClick="clickone(9)" />
+                <input id="theZero" type="button" value="0" onClick="clickone(0)" />
+            </div>
+            <div id="muvelet">
+
+                <input class="arithm" type="button" value="+" onClick="clickone('+')" />
+                <input class="arithm" type="button" value="-" onClick="clickone('-')" />
+                <input class="arithm" type="button" value="*" onClick="clickone('*')" />
+                <input class="arithm" type="button" value="/" onClick="clickone('/')" />
+                <input class="arithm" type="button" value="=" onClick="endEredmeny()" />
+            </div>
         </div>
-        <div id="muvelet">
-            
-            <input class="arithm" type="button" value="+" onClick="clickone('+')" />
-            <input class="arithm" type="button" value="-" onClick="clickone('-')" />
-            <input class="arithm" type="button" value="*" onClick="clickone('*')" />
-            <input class="arithm" type="button" value="/" onClick="clickone('/')" />
-            <input class="arithm" type="button" value="=" onClick="clickone('=')" />
-        </div>
-    </div>
     </div>
 </body>
 </html>
