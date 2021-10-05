@@ -156,4 +156,4 @@ function stuff(n1,n2){
     return console.log(n3)
 }
 stuff(50,60)
-stuff(50,101)
+stuff(80,101)
