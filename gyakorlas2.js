@@ -2,13 +2,18 @@
 //megint tul akarom komplikálni-.- de nagyon XD(akartem terminált amibe beadadot a valuét és ot kikeresi a  számot és ugy baszkodik :P)
 
 function time (hour,minutes) {
-    return console.log((hour*(60*60))+(minutes*60)+" seconds");
+    return ((hour*(60*60))+(minutes*60)+" seconds");
+    
     } 
-time(5,39);
+let time1 = time(5,39);
+console.log(time1);
 
-
-
-
+function osszeAd (a,b){
+return a+b;
+}
+let a12 = osszeAd(2,10);
+let qwe=osszeAd(a12,2);
+console.log(qwe);
 
 
 
@@ -18,11 +23,14 @@ time(5,39);
 
 
 function number (string){
-    return console.log(string = parseInt(string));
+    return parseInt(string);
 }
-number("500")
-
-
+let number31 = "500";
+console.log(number31);
+let a1 = number(number31);
+console.log(a1);
+console.log(number31);
+//ne akarj minden felülirni :3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
  //csak arrow function!!!!!!In the Code tab you will find code that is missing a single character in order to pass the tests. However, your goal is to submit a function as minimalist as possible. Use the tips in the tips section below.1
 /*
@@ -30,7 +38,7 @@ number("500")
  function add2(x) {
 	return x + 2;
 }
-add2(x) => {return x + 2}
+let add2 = (x) => {return x + 2}
 
 function add3(x) {
 	return x + 3;
@@ -62,9 +70,11 @@ add11(x) => {return x + 11}
 
 function lastOne(box) {
     let length = box.length;
-    return console.log(box[length-1]);
+    return box[length-1];
 }
-lastOne([5,6,8,7,69])
+let box2 = lastOne([5,6,8,7,69]);
+console.log(box2);
+console.log(lastOne("sajtoskenyér"));
 
 
 //Given a string, return true if its length is even or false if the length is odd.
@@ -72,17 +82,10 @@ lastOne([5,6,8,7,69])
 
 function evenOrNot(string){
 x = string.length;
-if (x%2 == 0)
-    return console.log(true);
-else
-	return console.log(false);
+return (x%2 == 0);
 }
-
-evenOrNot("sajto")
-
-
-
-
+let asd123 = evenOrNot("sajto");
+console.log(asd123);
 
 //Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
 
@@ -91,39 +94,42 @@ evenOrNot("sajto")
 //how the fuck date works-.-
 
 
+function xmas(date){
+    return (date.getMonth()===11 && date.getDate()== 24);
+}
+let asd666 = xmas(new Date(2021,11,24));
+console.log(asd666);
+
+
 //Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
 
 function biggerOrNot(number1){
-number1= parseInt(number1);
-   if (number1<=0){
-       return console.log(true);
-   }else{
-        return console.log(false);
-   }
+    let number69;
+    number69 = parseInt(number1);
+    return (number69<=0);
 }
-biggerOrNot(-20)
-
+let asd = biggerOrNot(-20);
+console.log(asd);
 
 
 //Given an n-sided regular polygon n, return the total sum of internal angles (in degrees).
 
 function szog (many){
-many= parseInt(many); //csak mert ha a fasz string ként addja be tudom hogy fölösleges meg a felsöbe is
-   return console.log((many - 2) * 180+"°");
+let kifli = parseInt(many); //csak mert ha a fasz string ként addja be tudom hogy fölösleges meg a felsöbe is
+   return ((kifli - 2) * 180+"°");
 }
-szog(5)
+console.log(szog(5));
 
-//You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
+//You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.fasznak akarod tul komplikálni a mindent is:3
 
 function kosar (twoPoint,threePoint){
-twoPoint = parseInt(twoPoint)
-threePoints = parseInt(threePoint)
-let = score = (0);
-console.log(twoPoint,threePoint)
-score = score+((twoPoint*2)+(threePoints*3));
-return console.log(score);
+    let twoPoint2= parseInt(twoPoint);
+    let threePoints3 = parseInt(threePoint);
+    let score = (twoPoint2*2)+(threePoints3*3);
+    return score;
 }
-kosar(1,1)
+let kif = kosar(1,1);
+console.log(kif);
 
 
 
@@ -138,13 +144,12 @@ function nameString(name){
 }*/
 
 function nameString(name,Edabit){
-let result
- result = (name+" "+Edabit);
- return console.log(result);
+let result = (name+" "+Edabit);
+ return result;
 }
 
-nameString("fuck","you!");
-
+let asd456 = nameString("fuck","you!");
+console.log(asd456);
 
 //Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
 
@@ -157,3 +162,22 @@ function stuff(n1,n2){
 }
 stuff(50,60)
 stuff(80,101)
+
+
+function longString (...numbers){
+    let all = numbers.length
+    let result =0
+    for (let i = 0;i<all;i++){
+    result = result + numbers[i]
+    }
+    return result
+}
+let nums = longString(1,2,3);
+console.log(nums);
+
+let hazSzam = 4;
+let haz = 6;
+let sokhaz = haz+((haz-1)*(hazSzam-1));
+console.log(sokhaz);
+
+
