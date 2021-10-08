@@ -5,7 +5,7 @@
   "main": "dzsészön.js",
   "scripts": {
     "sajt": "mkdir lofasz",
-    "start": "node gyak3",
+    "start": "node gyak4",
     "function": "node func"
   },
   "keywords": [

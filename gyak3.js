@@ -88,3 +88,15 @@ function car(input) {
 let theLastOne = car(box);
 //console.log(theLastOne);
 console.log(car(box2));
+
+
+
+function has_bugs(buggyCode) {
+	if (buggyCode === false) {
+		return 'sad days';
+	}else{
+        return "happy day"
+    }
+}
+let bug = has_bugs(true);
+console.log(bug);
