@@ -1,1 +1,18 @@
 api(aplication programing interface) = meghivhato kodbol;features;manuális csicska melot tudod automatizálni :3(pl keresés,informácio digging ?,);
+
+
+osztályok : :3  [Date]
+                [String] 
+                [Boolean] 
+                [(ezek az osztájok niga)]
+                [pozitiv egész számok] => elöjel ,értéke sok sok minden ,összeadás ,abszolut érték sok sok mined, (fügvány belseje)
+                                                                     
+                hogyan példányosits osztályt => "new" + osztály neve => new Date(1995-02-25)
+                let a =1995-02-25
+                                                                            Date(initialDate){}
+                 specko fügvén (constructor)=>()ami itt can akkor csinál a  "Date"alapján  olyanokat<3
+                 amit létrehotunk = példány ,vagy obj
+                 ami a váza az a class
+                 
+
+                 

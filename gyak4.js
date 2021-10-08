@@ -80,3 +80,24 @@ function canIrichIt(myStatus, myFriend) {
 
 }
 console.log(canIrichIt(mine, frineds));
+
+// rendezetlenböl rendezett 
+
+
+
+new Date(todayDate){
+    this.honap = todayDate.getMonth;
+    this.year = 0
+    this.nap = 0
+
+}
+
+// van egy tömböm annak a max értékét irja ki
+/*pseudo code ez itt=>
+result = tumb[0]
+for 0-tumb.length
+{
+    if tumb [i] nagyobb mint az eddigi result 
+    then result = tumb [i]
+}
+*/
