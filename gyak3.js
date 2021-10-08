@@ -100,3 +100,32 @@ function has_bugs(buggyCode) {
 }
 let bug = has_bugs(true);
 console.log(bug);
+
+
+
+//van e egy szam ketsze abban a szövegben
+
+let alany= "abadbcde";
+let i=0;
+let j=1;
+
+let megjoE=true;
+let franctudja=true;
+let megoldasIndex=0;
+
+
+for(let...stb...i<alany.length)
+{
+    for (let j=i+1<alany.length)
+    {
+        if (alany[i]==j){
+            megoldasindex = i+1;
+         blabla
+        }else{happyness , mehetek tovabb}
+
+    }
+}
+
+if (megJoE){
+    return megoldas;
+}else throw Exception("Semmisejo");
