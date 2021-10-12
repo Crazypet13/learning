@@ -104,7 +104,7 @@ for 0-tumb.length
 
 
 //van e egy szam ketsze abban a szövegben
-/*
+
 let alany= "abadbcde";
 let i=0;
 let j=1;
@@ -138,6 +138,9 @@ const numasd = 7;
 let lengthasd = 10;
 
 function szorzo(num,length){
+    if length = 0{
+        console.log("nem jo loszar")
+    }
 let box = [];
 for (let i = 0 ; i<length; i++){
     box.push(num*i);
