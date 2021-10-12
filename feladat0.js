@@ -22,30 +22,31 @@ const str2 = "abcbacdba";
 const hossz = str2.length;
 let hossz2 = hossz
 let box = [];
+let result = new Set();
 /*
 for (let i = 0; i < hossz; i++) {
     for (let j = i + 1; j < hossz; j++) {
         if (str2[i] === str2[j]) {
-            
-            let isNeedPush = true;
-            for (let k = 0; k < box.length; k++) {
-                if (box[k] !== str2[i]) {
-                    isNeedPush = isNeedPush && true;
-                } else {
-                    isNeedPush = false;
-                }
-            }
-            if (isNeedPush == true) {
-                box.push(str2[i]);
-            }
-        }
-    }
+                                             result.add(str2);
+                                                                                let isNeedPush = true;
+                                                                                for (let k = 0; k < box.length; k++) {
+                                                                                    if (box[k] !== str2[i]) {
+                                                                                        isNeedPush = isNeedPush && true;
+                                                                                    } else {
+                                                                                        isNeedPush = false;
+                                                                                    }
+                                                                                }
+                                                                                if (isNeedPush == true) {
+                                                                                    box.push(str2[i]);
+                            }
+                        }
+                    }
 }
 console.log(box);
 */
 
-const resoult = new Set(str2);
-console.log(resoult);
+add
+
 
 
 
