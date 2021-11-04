@@ -1,0 +1,43 @@
+[
+  {
+    "description": "  In order to do maths\n  As a developer\n  I want to increment variables",
+    "elements": [
+      {
+        "description": "",
+        "id": "simple-maths;ui-test",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "ui test",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "test",
+            "match": {
+              "location": "features\\support\\steps.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3539000000,
+              "error_message": "AssertionError [ERR_ASSERTION]: YOU FUCKED UP\n    + expected - actual\n\n    -false\n    +true\n\n    at CustomWorld.<anonymous> (C:\\Users\\Pet\\Documents\\learning\\gherkin_test\\features\\support\\steps.js:38:10)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-1",
+            "line": 24
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "simple-maths",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Simple maths",
+    "tags": [],
+    "uri": "features\\simple_math.feature"
+  }
+]
