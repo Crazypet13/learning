@@ -5,7 +5,7 @@
   "main": "dzsészön.js",
   "scripts": {
     "sajt": "mkdir lofasz",
-    "start": "node feladat0",
+    "start": "node ran",
     "function": "node func"
   },
   "keywords": [
