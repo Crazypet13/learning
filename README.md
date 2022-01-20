@@ -132,6 +132,7 @@ Mikor egy programot akar egy csapat fejleszteni, akkor hogy a sikerességet gara
 * x/=3  ( jelentése: x = x/3)
 * x%=3  ( jelentése: x = x%3)
 
+
  ### Relációs kifejezések (hasonlítjuk az értékeiket egymáshoz)(!!!igaz vagy hamis lesz az eredményük!!!)
  * x==3
  * x===3
