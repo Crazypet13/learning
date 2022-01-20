@@ -1,8 +1,9 @@
 // features/support/steps.js
-const { firefox } = require('playwright');
 const { Given, When, Then } = require("@cucumber/cucumber");
 const assert = require("assert").strict;
+
 const lofasz = require("./helper");
+const { getPage } = require('./e2e_helper');
 
 Given("a variable set to {int}", function (number) {
   //console.log(number);
@@ -10,34 +11,35 @@ Given("a variable set to {int}", function (number) {
   //lofasz.test();
 });
 
-Given("test", { timeout: 10000 }, async function () {
-  const browser = await firefox.launch({
-    headless: false
-  });
-  const context = await browser.newContext();
-  const page = await context.newPage();
-  await page.goto('http://www.uitestingplayground.com/sampleapp');
-  const dimensions = await page.evaluate(() => {
-    return {
-      width: document.documentElement.clientWidth,
-      height: document.documentElement.clientHeight,
-      deviceScaleFactor: window.devicePixelRatio
-    }
-  });
+Given("i navigate to {string}", async function (url) {
+  let page = getPage();
+  await page.goto(url)
+});
+
+When("i fill password with {string}", async function (password) {
+  let page = getPage();
   await page.waitForSelector('[name="Password"]');
-  await page.fill('[name="Password"]', 'pasw00rd');
+  await page.fill('[name="Password"]', password);
+});
+
+When('i fill username with {string}', async function (name) {
+  let page = getPage();
   await page.waitForSelector('[placeholder="User Name"]');
-  await page.fill('[placeholder="User Name"]', 'Hello');
+  await page.fill('[placeholder="User Name"]', name);
+});
+
+When('i push log in button', async function () {
+  let page = getPage();
   await page.waitForSelector('[id="login"]');
   await page.click('[id="login"]');
-  console.log(dimensions);
+})
+
+Then("i validate login message what is {string}", async function (errorMessage) {
+  let page = getPage();
+  let status;
   await page.waitForSelector('[id="loginstatus"]');
-  let status = await page.innerText('[id="loginstatus"]');
-  console.log(status);
-  const expactedMessage = "Invalid username/password";
-  assert.ok(expactedMessage == status, "YOU FUCKED UP");
-  await page.waitForTimeout(5000);
-  await browser.close();
+  status = await page.innerText('[id="loginstatus"]');
+  assert.ok(errorMessage == status, "YOU FUCKED UP");
 });
 
 When("I increment the variable by {int}", function (number) {
