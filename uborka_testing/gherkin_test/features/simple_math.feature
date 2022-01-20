@@ -4,11 +4,11 @@ Feature: Simple maths
   As a developer
   I want to increment variables
 
-  @id-3
+  @id-1
   Scenario: easy maths
     Given a variable set to 1
     When I increment the variable by 1
-    Then the variable should contain 3
+    Then the variable should contain 2
 
   @id-2
   Scenario Outline: much more complex stuff
@@ -21,7 +21,18 @@ Feature: Simple maths
       | 99  | 1234      | 1333   |
       | 12  | 5         | 17     |
 
-  @id-1
-  
-  Scenario: ui test
-    Given test
+  @id-3 @e2e
+  Scenario: test log in with wrong data
+    Given i navigate to "http://www.uitestingplayground.com/sampleapp"
+    When i fill password with "passw00rd"
+    And i fill username with "Béla"
+    And i push log in button
+    Then i validate login message what is "Invalid username/password"
+
+  @id-4 @e2e
+  Scenario: succesfull log in
+    Given i navigate to "http://www.uitestingplayground.com/sampleapp"
+    When i fill password with "pwd"
+    And i fill username with "János"
+    And i push log in button
+    Then i validate login message what is "Welcome, János!"

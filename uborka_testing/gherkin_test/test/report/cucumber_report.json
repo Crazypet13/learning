@@ -4,30 +4,470 @@
     "elements": [
       {
         "description": "",
-        "id": "simple-maths;ui-test",
+        "id": "simple-maths;easy-maths",
         "keyword": "Scenario",
-        "line": 26,
-        "name": "ui test",
+        "line": 8,
+        "name": "easy maths",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 27,
-            "name": "test",
+            "line": 9,
+            "name": "a variable set to 1",
             "match": {
-              "location": "features\\support\\steps.js:13"
+              "location": "features\\support\\steps.js:8"
             },
             "result": {
-              "status": "failed",
-              "duration": 3539000000,
-              "error_message": "AssertionError [ERR_ASSERTION]: YOU FUCKED UP\n    + expected - actual\n\n    -false\n    +true\n\n    at CustomWorld.<anonymous> (C:\\Users\\Pet\\Documents\\learning\\gherkin_test\\features\\support\\steps.js:38:10)"
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I increment the variable by 1",
+            "match": {
+              "location": "features\\support\\steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the variable should contain 2",
+            "match": {
+              "location": "features\\support\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ],
         "tags": [
           {
             "name": "@id-1",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "simple-maths;much-more-complex-stuff",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "much more complex stuff",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "a variable set to 100",
+            "match": {
+              "location": "features\\support\\steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I increment the variable by 5",
+            "match": {
+              "location": "features\\support\\steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the variable should contain 105",
+            "match": {
+              "location": "features\\support\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-2",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "simple-maths;much-more-complex-stuff",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "much more complex stuff",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "a variable set to 99",
+            "match": {
+              "location": "features\\support\\steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I increment the variable by 1234",
+            "match": {
+              "location": "features\\support\\steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the variable should contain 1333",
+            "match": {
+              "location": "features\\support\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-2",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "simple-maths;much-more-complex-stuff",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "much more complex stuff",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "a variable set to 12",
+            "match": {
+              "location": "features\\support\\steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I increment the variable by 5",
+            "match": {
+              "location": "features\\support\\steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the variable should contain 17",
+            "match": {
+              "location": "features\\support\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-2",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "simple-maths;test-log-in-with-wrong-data",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "test log in with wrong data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "i navigate to \"http://www.uitestingplayground.com/sampleapp\"",
+            "match": {
+              "location": "features\\support\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 745000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "i fill password with \"passw00rd\"",
+            "match": {
+              "location": "features\\support\\steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "i fill username with \"Béla\"",
+            "match": {
+              "location": "features\\support\\steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "i push log in button",
+            "match": {
+              "location": "features\\support\\steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "i validate login message what is \"Invalid username/password\"",
+            "match": {
+              "location": "features\\support\\steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-3",
             "line": 24
+          },
+          {
+            "name": "@e2e",
+            "line": 24
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "simple-maths;succesfull-log-in",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "succesfull log in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "i navigate to \"http://www.uitestingplayground.com/sampleapp\"",
+            "match": {
+              "location": "features\\support\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 418000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "i fill password with \"pwd\"",
+            "match": {
+              "location": "features\\support\\steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "i fill username with \"János\"",
+            "match": {
+              "location": "features\\support\\steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "i push log in button",
+            "match": {
+              "location": "features\\support\\steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "i validate login message what is \"Welcome, János!\"",
+            "match": {
+              "location": "features\\support\\steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@id-4",
+            "line": 32
+          },
+          {
+            "name": "@e2e",
+            "line": 32
           }
         ],
         "type": "scenario"
