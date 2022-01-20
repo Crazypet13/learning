@@ -1,2 +1,3 @@
 random_stuff/node_modules
-uborka_testing/node_modules
+uborka_testing/gherkin_test/node_modules
+uborka_testing/gherkin_test/test/report
