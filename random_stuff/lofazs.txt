@@ -1,0 +1,37 @@
+let sajt = ;
+boolean = true,false cuccos;
+const =();
+var=();
+hoyisting
+String sajtok = "gorgonzola";
+let sajtok = "gorgonzola";
+sajtok = 3;
+6EchmaScript (var = let) 
+metódus===function===fügvény
+let sajt=()=>{
+};
+if (sutANap === true){
+console.log("tiszta az ég");
+}else{
+   console.log("dörög az ég");
+}
+switch (season){
+case "tavasz":
+console.log();
+break;
+
+case "tél":
+console.log();
+break;
+
+case "nyár":
+console.log();
+break;
+
+case "ösz":
+console.log();
+break;
+}
+const katics = 1
+for (let index = 0;index<10;index = index+katica){
+}
