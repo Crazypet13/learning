@@ -1,0 +1,30 @@
+ etalon = béka 
+ arrey = []
+ benne van = false
+ while i-je
+ for (i = 0 ,arrey.hossz ig fusson,i++ ) {
+     darab szám=0
+     if('béka'bennevan a arreybe){
+         azt arrey[i] true
+         darabszám++
+     }
+ }
+
+ while (&&ije<arrey.hossz)
+
+bubble sort ()
+
+let array = kockazárójel
+1,0,3,
+
+for(let i = 0 .. i kiseebb array.length.. i++)
+if(array–i– nagyobb arry–i+1–)
+—-
+let temp = array–i–
+array–i– = array –i+1–
+array–i+1– = temp
+—-
+else… jókvagyunk
+
+https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm
+https://medium.com/javarevisited/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0
