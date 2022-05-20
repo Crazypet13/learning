@@ -4,12 +4,13 @@ const HealingSpells = require('./healingSpells');
 const Player = require('./player');
 const Enemy = require('./enemy');
 
+let magicSpoon = new DamageSpells('Spoon',1,5,600,'and again and agin and again')
 let fireBall = new DamageSpells('FireBall', 80, 20, 10, 'its a fireball what do you think?');
 let thunderBolt = new DamageSpells('ThunderBolt', 100, 40, 300, 'Fry them up');
 let fireStorm = new DamageSpells('FireStorm', 50, 30, 50, 'melt them');
 let hollyFire = new HealingSpells('HollyFire', 30, 15, 0, 100, 'BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!');
 
-
+//index(ui) or main(backend) is the start of the programs :3 <3
 //let bob = new Player('Bob',150,300,50);
 /*
 bob.setHp(-90);
@@ -37,8 +38,8 @@ ohhh booooy make an interacteble !ai what react to your attacs and stuff
 class AreneFight {
     player1 = null
     enemy = null
-    #currentRound = 1;
-    #roundsEndMax = 8;//while(!rounds && !roundsEnd && meghaltam && megöltem bélát) /maybe
+    #currentRoundNumber = 1;
+    #maxRounds = 8;//while(!rounds && !roundsEnd && meghaltam && megöltem bélát) /maybe
 
     constructor(player1, enemy) {
         this.player1 = player1;
@@ -46,7 +47,7 @@ class AreneFight {
         this.inItSpells();
     }
     fight() {
-        let isItEnded = this.#currentRound <= this.#roundsEndMax;
+        let isItEnded = this.#currentRoundNumber <= this.#maxRounds;
         let someOneDied = 0 < this.player1.getHp() || 0 < this.enemy.getHp()
 
         /*while (isItEnded || someOneDied) {
@@ -59,11 +60,11 @@ class AreneFight {
             }
         }
         */
-       for (i=0;i<this.#roundsEndMax;i++){
-        console.log(this.#currentRound)
-           this.#currentRound += i+1;
-           console.log(this.#currentRound)
-       } 
+        for (let i = 0; i < this.#maxRounds; i++) {
+            this.#currentRoundNumber = i + 1;
+           let roundInProgress = new Round(this.enemy,this.player1,this.#currentRoundNumber);
+           roundInProgress.starter()
+        }
     }
 
     getInput(question) {
@@ -77,8 +78,8 @@ class AreneFight {
             return 1;
         })
     }
-    inItSpells(){
-        this.player1.setSpells([fireBall,thunderBolt,fireStorm,hollyFire]);
+    inItSpells() {
+        this.player1.setSpells([fireBall, thunderBolt, fireStorm, hollyFire,magicSpoon]);
     }
 
 }

@@ -1,5 +1,24 @@
+const SpellReader = require('./spellReader');
 
-module.exports = class Round{
+module.exports = class Round {
+    enemy = null;
+    player = null;
+    inputSpelles = null;
+    aiSpells = null;
+    currentRound = null;
+    constructor(enemy, player, currentRound) {
+        this.enemy = enemy;
+        this.player = player;
+        this.currentRound = currentRound;
+    }
+    starter() {
+        console.log(`welcome to round ${this.currentRound} MF!!`);
+        let answer = SpellReader.read();
+        let theSpell = this.player.getSpellByName();
+        console.log(theSpell);
+    }
+}
+/*
     #timeLeft = 5.5
     constructor() {
 
@@ -14,4 +33,5 @@ module.exports = class Round{
             this.#timeLeft -= time;//this.#timeLeft = (this.#timeLeft - time); 
         }
     }
-}
+
+*/

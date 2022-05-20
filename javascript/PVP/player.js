@@ -70,6 +70,14 @@ module.exports = class Player {
             return this.spellBook;
         }
     }
+    getSpellByName(spellName){
+        let i=0;
+        while(spellName !== this.spellBook[i].getName() && i < this.spellBook.length-1){
+            i++
+        }
+        return this.spellBook[i]
+        
+    }
     addSpells(spellName) {
         if (typeof spellName === 'object') {
             this.spellBook.push(spellName);

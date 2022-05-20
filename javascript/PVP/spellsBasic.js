@@ -7,9 +7,8 @@ module.exports = class Spells {
     description;
     name;
 
-    constructor(name, damage, manaCost, armorpen, description,) {
+    constructor(name, damage, manaCost, armorpen, description) {
         this.description = description;
-        this.castTime = castTime;
         this.name = name;
         this.damage = damage;
         this.cost = manaCost;
@@ -26,9 +25,6 @@ module.exports = class Spells {
     }
     getCost() {
         return this.manaCost;
-    }
-    getCastingTime() {
-        return this.castTime;
     }
     getName() {
         return this.name;
