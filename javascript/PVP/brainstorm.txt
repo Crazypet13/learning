@@ -1,0 +1,6 @@
+bob 150 élet 
+    300 mana
+    50 armor
+
+    8 round
+    
