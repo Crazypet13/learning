@@ -4,7 +4,7 @@ const HealingSpells = require('./healingSpells');
 const Player = require('./player');
 const Enemy = require('./enemy');
 
-let magicSpoon = new DamageSpells('Spoon',1,5,600,'and again and agin and again')
+let magicSpoon = new DamageSpells('Spoon', 1, 5, 600, 'and again and agin and again')
 let fireBall = new DamageSpells('FireBall', 80, 20, 10, 'its a fireball what do you think?');
 let thunderBolt = new DamageSpells('ThunderBolt', 100, 40, 300, 'Fry them up');
 let fireStorm = new DamageSpells('FireStorm', 50, 30, 50, 'melt them');
@@ -62,8 +62,8 @@ class AreneFight {
         */
         for (let i = 0; i < this.#maxRounds; i++) {
             this.#currentRoundNumber = i + 1;
-           let roundInProgress = new Round(this.enemy,this.player1,this.#currentRoundNumber);
-           roundInProgress.starter()
+            let roundInProgress = new Round(this.enemy, this.player1, this.#currentRoundNumber);
+            roundInProgress.starter()
         }
     }
 
@@ -79,7 +79,8 @@ class AreneFight {
         })
     }
     inItSpells() {
-        this.player1.setSpells([fireBall, thunderBolt, fireStorm, hollyFire,magicSpoon]);
+        this.player1.setSpells([fireBall, thunderBolt, fireStorm, hollyFire]);
+        //this.player1.setSpells(null);
     }
 
 }

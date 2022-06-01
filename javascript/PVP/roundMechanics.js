@@ -14,8 +14,10 @@ module.exports = class Round {
     starter() {
         console.log(`welcome to round ${this.currentRound} MF!!`);
         let answer = SpellReader.read();
-        let theSpell = this.player.getSpellByName();
-        console.log(theSpell);
+        let theSpell = this.player.getSpellByName(answer);
+        (!!theSpell == true) ? console.log(theSpell.getName()) : console.log("nincs ilyen spell") ;
+
+
     }
 }
 /*

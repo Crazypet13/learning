@@ -6,3 +6,13 @@ bob 150 élet
     
     herose 69 <3
     
+
+
+    null 
+    üres [] => null 
+    lista de nincs benne [] => null
+    lista benne van [];{
+        [0] =>
+        [252] =>
+        [length-1] =>
+    }

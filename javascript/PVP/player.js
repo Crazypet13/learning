@@ -70,13 +70,52 @@ module.exports = class Player {
             return this.spellBook;
         }
     }
-    getSpellByName(spellName){
-        let i=0;
-        while(spellName !== this.spellBook[i].getName() && i < this.spellBook.length-1){
+    getSpellByName(spellName) {
+        /* let i=0; 
+         let lastSpellIsTheRightOne = this.spellBook[this.spellBook.length-1].getName() === spellName;
+     
+         while((spellName !== this.spellBook[i].getName() && i < this.spellBook.length-1 ) || lastSpellIsTheRightOne){
+             // console.log(this.spellBook[i].getName()+"THIS IS A GET SPEEELLLLL");
+ 
+             if (lastSpellIsTheRightOne === true ){
+                 return this.spellBook[this.spellBook.length-1];
+             }else{
+                 i++;
+             }
+             
+         }
+         if (lastSpellIsTheRightOne === false) {
+             return null;
+         }
+         return this.spellBook[i]
+         */
+        if (typeof this.spellBook === null) {
+            return null;
+        }
+        if (this.spellBook.length == 0) {
+            return null;
+        }
+        for (let spell of this.spellBook){
+            //console.log(spell)
+            if (spell.getName()===spellName){
+               return spell;
+            }
+        }
+        return null
+        /*
+        if (typeof this.spellBook === null) {
+            return null;
+        }
+        let i = 0 
+        while( i<this.spellBook.length-1 && this.spellBook[i].getName !== spellName){
             i++
         }
-        return this.spellBook[i]
-        
+        if (i == this.spellBook.length-1){
+            return null
+        }else{
+           return this.spellBook[i];
+        }
+        */
     }
     addSpells(spellName) {
         if (typeof spellName === 'object') {
@@ -85,7 +124,7 @@ module.exports = class Player {
             console.log("this is not a spell");
         }
     }
-    setSpells(spells){
+    setSpells(spells) {
         this.spellBook = spells;
     }
 }
