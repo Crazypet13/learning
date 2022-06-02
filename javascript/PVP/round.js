@@ -1,4 +1,5 @@
 const SpellReader = require('./spellReader');
+const Action =require('./action');
 
 module.exports = class Round {
     enemy = null;
@@ -11,14 +12,15 @@ module.exports = class Round {
         this.player = player;
         this.currentRound = currentRound;
     }
-    starter() {
+    start() {
         console.log(`welcome to round ${this.currentRound} MF!!`);
         let answer = SpellReader.read();
         let theSpell = this.player.getSpellByName(answer);
         (!!theSpell == true) ? console.log(theSpell.getName()) : console.log("nincs ilyen spell") ;
-
-
+        let playerTurn = new Action(this.enemy,this.player,theSpell);
+        playerTurn.act()
     }
+    
 }
 /*
     #timeLeft = 5.5

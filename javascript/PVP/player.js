@@ -28,6 +28,7 @@ module.exports = class Player {
             this.#hp = (this.#hp + hpChange);
             console.log(this.getHpPercent());
         }
+        //payer hp setter okosabre hogy armorbol - oljon elöször  later <3
     }
     getMana() {
         return this.#mana;
@@ -92,7 +93,7 @@ module.exports = class Player {
         if (typeof this.spellBook === null) {
             return null;
         }
-        if (this.spellBook.length == 0) {
+        if (this.spellBook.length === 0) {
             return null;
         }
         for (let spell of this.spellBook){

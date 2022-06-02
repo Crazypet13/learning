@@ -1,4 +1,4 @@
-const Round = require('./roundMechanics');
+const Round = require('./round');
 const DamageSpells = require('./damageSpells');
 const HealingSpells = require('./healingSpells');
 const Player = require('./player');
@@ -63,7 +63,8 @@ class AreneFight {
         for (let i = 0; i < this.#maxRounds; i++) {
             this.#currentRoundNumber = i + 1;
             let roundInProgress = new Round(this.enemy, this.player1, this.#currentRoundNumber);
-            roundInProgress.starter()
+            roundInProgress.start();
+            
         }
     }
 
@@ -79,7 +80,7 @@ class AreneFight {
         })
     }
     inItSpells() {
-        this.player1.setSpells([fireBall, thunderBolt, fireStorm, hollyFire]);
+        this.player1.setSpells([fireBall, thunderBolt, fireStorm, magicSpoon, hollyFire]);
         //this.player1.setSpells(null);
     }
 

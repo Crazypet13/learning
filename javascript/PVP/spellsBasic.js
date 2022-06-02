@@ -29,4 +29,7 @@ module.exports = class Spells {
     getName() {
         return this.name;
     }
+    getType(){
+        throw "not Implemented"
+    }
 }

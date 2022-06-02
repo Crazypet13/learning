@@ -1,7 +1,7 @@
 const Spells = require('./spellsBasic');
 
 module.exports = class HealingSpells extends Spells {
-    healAmount
+    healAmount = null;
 
     constructor(name, damage, cost, armorpen, healAmount, description) {
         super(name, damage, cost, armorpen, description);
@@ -11,7 +11,9 @@ module.exports = class HealingSpells extends Spells {
         return this.healAmount;
     }
     getType() {
-        return 'heal';
+        return HealingSpells.healType();
     }
-
+    static healType(){
+        return 'heal'
+    }
 }
