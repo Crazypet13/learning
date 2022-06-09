@@ -1,9 +1,9 @@
 const Spells = require('./spellsBasic');
 
 module.exports = class DamageSpells extends Spells {
-    
-    constructor(name, damage, cost, armorpen, description) {
-        super(name, damage, cost, armorpen, description);
+    armorpen = null
+    constructor(name, damage, cost, description, armorpen) {
+        super(name, damage, cost, description);
         this.damage = damage;
         this.manaCost = cost;
         this.armorpen = armorpen;
@@ -11,7 +11,12 @@ module.exports = class DamageSpells extends Spells {
     getType() {
         return DamageSpells.damageType();
     }
-    static damageType(){
+
+    static damageType() {
         return 'damage';
+    }
+
+    getArmorPen() {
+        return this.armorpen;
     }
 }

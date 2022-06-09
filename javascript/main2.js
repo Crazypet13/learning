@@ -13,9 +13,9 @@ let lofasz = [];
 
 obj.a++;
 /*
-    console.log(obj.b);
-    console.log(obj.a);
-    console.log(obj2.a);
+console.log(obj.b);
+console.log(obj.a);
+console.log(obj2.a);
 */
 console.log(obj.d.a);
 

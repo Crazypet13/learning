@@ -15,20 +15,59 @@ module.exports = class Player {
     getHp() {
         return this.#hp;
     }
-    setHp(hpChange) {
-        if (typeof hpChange !== 'number' || (hpChange === NaN)) {
-            console.log('please add me a number')
-        } else if (this.#maxHp <= (hpChange + this.#hp)) {
-            this.#hp = this.#maxHp;
-            console.log(this.getHpPercent());
-        } else if ((this.#hp + hpChange) <= 0) {
-            this.#hp = 0;
-            console.log(this.getHpPercent() + "  " + 'knocked out!!!');
+    // setHp is smarter calculating with armore value if we take damage -in heal not changed
+    setHp(hpChange,armorpen) {
+        if (typeof hpChange !== 'number' || (hpChange === NaN) || typeof armorpen !== 'number' || (armorpen === NaN)) {
+            console.log(hpChange,armorpen)
         } else {
-            this.#hp = (this.#hp + hpChange);
-            console.log(this.getHpPercent());
+            if (hpChange > 0) {
+                if (this.#maxHp <= (hpChange + this.#hp)) {
+                    this.#hp = this.#maxHp;
+                    console.log(this.getHpPercent());
+                } else if ((this.#hp + hpChange) <= 0) {
+                    this.#hp = 0;
+                    console.log(this.getHpPercent() + "  " + 'knocked out!!!');
+                } else {
+                    this.#hp = (this.#hp + hpChange);
+                    console.log(this.getHpPercent());
+                    return hpChange*-1;
+                }
+
+            } else {
+                if (this.armorValue <= armorpen){
+                    if (this.#maxHp <= (hpChange + this.#hp)) {
+                        this.#hp = this.#maxHp;
+                        console.log(this.getHpPercent());
+                    } else if ((this.#hp + hpChange) <= 0) {
+                        this.#hp = 0;
+                        console.log(this.getHpPercent() + "  " + 'knocked out!!!');
+                    } else {
+                        this.#hp = (this.#hp + hpChange);
+                        console.log(this.getHpPercent());
+                    }
+                    return hpChange*-1;
+                }else{
+                    let realArmor = this.armorValue - armorpen
+                    console.log(this.armorValue,armorpen,realArmor,hpChange)
+                    if (this.#maxHp <= ((hpChange + realArmor) + this.#hp)) {
+                        this.#hp = this.#maxHp;
+                        console.log(this.getHpPercent());
+                    } else if ((this.#hp + (hpChange + realArmor)) <= 0) {
+                        this.#hp = 0;
+                        console.log(this.getHpPercent() + "  " + 'knocked out!!!');
+                    } else {
+                        this.#hp = (this.#hp + (hpChange + realArmor));
+                        console.log(this.getHpPercent());
+                    }
+                    if (realArmor>hpChange){
+                        return 0
+                    }else{
+                        return (hpChange+realArmor)*-1;
+                    }
+
+                }
+            }
         }
-        //payer hp setter okosabre hogy armorbol - oljon elöször  later <3
     }
     getMana() {
         return this.#mana;
@@ -60,6 +99,9 @@ module.exports = class Player {
     getHpPercent() {
         let parcent = (this.#hp / this.#maxHp) * 100
         return parseFloat(parcent).toFixed(2) + ' %';
+    }
+    getHpPercentNumber(){
+        return (this.#hp / this.#maxHp) * 100
     }
     getSpells() {
         // !!0 negálva a negácio 
@@ -96,10 +138,10 @@ module.exports = class Player {
         if (this.spellBook.length === 0) {
             return null;
         }
-        for (let spell of this.spellBook){
+        for (let spell of this.spellBook) {
             //console.log(spell)
-            if (spell.getName()===spellName){
-               return spell;
+            if (spell.getName() === spellName) {
+                return spell;
             }
         }
         return null

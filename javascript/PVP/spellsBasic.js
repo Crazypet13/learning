@@ -7,21 +7,17 @@ module.exports = class Spells {
     description;
     name;
 
-    constructor(name, damage, manaCost, armorpen, description) {
+    constructor(name, damage, manaCost, description) {
         this.description = description;
         this.name = name;
         this.damage = damage;
         this.cost = manaCost;
-        this.armorpen = armorpen;
     }
     getDamage() {
         return this.damage;
     }
     getDesc() {
         return this.description;
-    }
-    getArmorPen() {
-        return this.armorpen;
     }
     getCost() {
         return this.manaCost;

@@ -1,14 +1,14 @@
 const Round = require('./round');
-const DamageSpells = require('./damageSpells');
-const HealingSpells = require('./healingSpells');
+const DamageSpells = require('./spellsDamage');
+const HealingSpells = require('./spellsHealing');
 const Player = require('./player');
 const Enemy = require('./enemy');
 
-let magicSpoon = new DamageSpells('Spoon', 1, 5, 600, 'and again and agin and again')
-let fireBall = new DamageSpells('FireBall', 80, 20, 10, 'its a fireball what do you think?');
-let thunderBolt = new DamageSpells('ThunderBolt', 100, 40, 300, 'Fry them up');
-let fireStorm = new DamageSpells('FireStorm', 50, 30, 50, 'melt them');
-let hollyFire = new HealingSpells('HollyFire', 30, 15, 0, 100, 'BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!');
+let magicSpoon = new DamageSpells('Spoon', 1, 5,'and again and agin and again',600)
+let fireBall = new DamageSpells('FireBall', 80, 20,'its a fireball what do you think?', 10);
+let thunderBolt = new DamageSpells('ThunderBolt', 100, 40,'Fry them up',300);
+let fireStorm = new DamageSpells('FireStorm', 50, 30,'melt them',50);
+let hollyFire = new HealingSpells('HollyFire', 30, 15, 100, 'BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!');
 
 //index(ui) or main(backend) is the start of the programs :3 <3
 //let bob = new Player('Bob',150,300,50);
@@ -81,11 +81,12 @@ class AreneFight {
     }
     inItSpells() {
         this.player1.setSpells([fireBall, thunderBolt, fireStorm, magicSpoon, hollyFire]);
+        this.enemy.setSpells([fireBall, thunderBolt, fireStorm, magicSpoon, hollyFire]);
         //this.player1.setSpells(null);
     }
 
 }
-let bob = new Player('Bob', 150, 300, 50);
+let bob = new Player('Bob', 150, 300, 100);
 let Bob2 = new Player('Bob2', 150, 300, 50);
 let cica = new AreneFight(bob, Bob2);
 cica.fight()

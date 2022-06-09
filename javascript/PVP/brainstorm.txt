@@ -16,3 +16,13 @@ bob 150 élet
         [252] =>
         [length-1] =>
     }
+
+aremor pen 
+
+
+armor(10) > armor pen(1) damage deduc armor - armor pen (9) 
+armor (10) <= armor pen(6000) set armor to (0)   
+armor = pen set 0  
+
+we need an ai XD
+:P

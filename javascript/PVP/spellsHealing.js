@@ -3,8 +3,8 @@ const Spells = require('./spellsBasic');
 module.exports = class HealingSpells extends Spells {
     healAmount = null;
 
-    constructor(name, damage, cost, armorpen, healAmount, description) {
-        super(name, damage, cost, armorpen, description);
+    constructor(name, damage, cost, healAmount, description) {
+        super(name, damage, cost, description);
         this.healAmount = healAmount;
     }
     getHeal() {
