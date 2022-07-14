@@ -1,6 +1,14 @@
+const readlineSync = require('readline-sync');
 module.exports = class SpellReader{
     constructor(){
 
+    }
+    static getInput(){   
+
+       let spells = ['spoon','fireball','HOLLYFIRE','thunderbolt'];
+       let index = readlineSync.keyInSelect(spells, 'What do you want to do');
+      console.log('Ok, ' + spells[index] + ' will be cast.');
+          
     }
     static read(){
         /*while (isItEnded || someOneDied) {
@@ -13,6 +21,7 @@ module.exports = class SpellReader{
             }
         }
         */
+        this.getInput();
         return 'Spoon';
     }
 }

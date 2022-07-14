@@ -48,7 +48,6 @@ module.exports = class Player {
                     return hpChange*-1;
                 }else{
                     let realArmor = this.armorValue - armorpen
-                    console.log(this.armorValue,armorpen,realArmor,hpChange)
                     if (this.#maxHp <= ((hpChange + realArmor) + this.#hp)) {
                         this.#hp = this.#maxHp;
                         console.log(this.getHpPercent());

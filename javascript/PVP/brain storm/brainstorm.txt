@@ -1,0 +1,80 @@
+bob 150 élet 
+    300 mana
+    50 armor
+
+    8 round
+    
+    herose 69 <3
+    
+
+
+    null 
+    üres [] => null 
+    lista de nincs benne [] => null
+    lista benne van [];{
+        [0] =>
+        [252] =>
+        [length-1] =>
+    }
+
+aremor pen 
+
+
+armor(10) > armor pen(1) damage deduc armor - armor pen (9) 
+armor (10) <= armor pen(6000) set armor to (0)   
+armor = pen set 0  
+
+we need an ai XD
+:P
+
+
+-be olvasás rendes megoldása
+    *info hogy milyen spelljeid vannak
+    *egy reader check vagy string átalakíto(bejövö => switch case a spell megfelelö iráas kép + hiba ha nem megfelelö info)
+    *megfelelö async közek lekezelése 
+
+-fight tovább fejlesztése 2.0
+    *külsö választo felület (mit akarsz csinálni [
+                                                    tanulni(spell options)
+                                                    harcolni(run .fight() )
+                                                    karakter váltás 
+                                                    kilépni? 
+                                                   //talán késöbbi be{ edzeni?(stat boost)
+    
+
+    tanulni
+        :meglévö spellek ki irása stattal infoval `${}` talán hasznos a rendezéshez
+        :kiválasztani a változtando spellt és mutasd az összes többit hogy mire lehet
+        :megfelelö beolvaso felület és kezelése 
+    
+    harc 
+        :ezpeasy ctrl c+v hogy induljon a .fight()
+    
+    karakter választo 
+        :több karakter készítése különbözö spellekel és statokkal
+        :ki iratása \n `${}` stat lista talán kicsit át láthatobb
+        : megfelelö be frissítés a karakter adatainak talán vissza jelzés pl:'nagy fény csapot meg majd béla a kaszás ként léptél ki belöle'
+        
+    kilépés
+        :program le állítás  talán akkori karakter lementése hogy ha ujra indul akkor nem keljen be állítgatni 
+db 
+
+
+több ai készítése //todo 
+
+t: task /E :Epic
+
+1E: 1.0 fight() 
+            0t :beolvaso implementácioja;
+2E: DB készités;
+fight 2.0     
+            1t: kezeöfelület készítése;
+            2t: több spell;
+            3t: tanuló module;
+            4t: harcolo module be ilesztése;
+            5t: karakter választás module;
+            6t: belépés (game inditás depend:2E);
+            7t: kilépés(mentés adatok depend:2E);
+            8t: több AI (depends on 2t)
+fight 3.0  
+3E: UI
