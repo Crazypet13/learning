@@ -25,13 +25,13 @@ module.exports = class Action {
 
        if (this.spell.getType() === HealingSpells.healType()){
         
-        this.actor.setHp(this.spell.getHeal());
+        this.actor.setHp(this.spell.getHeal(),this.spell.getArmorPen());
         //heal
         let manaCost = this.spell.getCost()*-1;
         this.actor.setMana(manaCost)
         //mana drain
         let damage = this.spell.getDamage()*-1;
-        let  damageConsLogH = this.target.setHp(damage);
+       let damageConsLogH = this.target.setHp(damage,this.spell.getArmorPen());
         //enemy damage
         //damage - armor cuccos valami majd késobb todo leter :3
 

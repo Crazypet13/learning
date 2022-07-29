@@ -1,5 +1,5 @@
 const SpellReader = require('./spellReader');
-const Action =require('./action');
+const Action = require('./action');
 const AiBasic = require('./aiBasic');
 
 module.exports = class Round {
@@ -15,21 +15,22 @@ module.exports = class Round {
     }
     start() {
         console.log(`welcome to round ${this.currentRound} MF!!`);
-        let answer = SpellReader.read();
+        let answer = SpellReader.getInput();
         let theSpell = this.player.getSpellByName(answer);
-        (!!theSpell == true) ? console.log(theSpell.getName()) : console.log("nincs ilyen spell") ;
-        let playerTurn = new Action(this.enemy,this.player,theSpell);
+        (!!theSpell == true) ? console.log(theSpell.getName()) : console.log("nincs ilyen spell");
+        let playerTurn = new Action(this.enemy, this.player, theSpell);
         playerTurn.act();
+        if (this.enemy.getHp() === 0) { return }
         console.log("---------------------------------------")
         let ai = new AiBasic(this.enemy);
         let theEnemySpellName = ai.getSpell();
         let enemySpell = this.enemy.getSpellByName(theEnemySpellName);
-        (!!enemySpell == true) ? console.log(enemySpell.getName()) : console.log("nincs ilyen spell") ;
-        let enemyTurn = new Action(this.player,this.enemy,enemySpell);
+        (!!enemySpell == true) ? console.log(enemySpell.getName()) : console.log("nincs ilyen spell");
+        let enemyTurn = new Action(this.player, this.enemy, enemySpell);
         enemyTurn.act();
         console.log("==========================================")
     }
-    
+
 }
 /*
     #timeLeft = 5.5

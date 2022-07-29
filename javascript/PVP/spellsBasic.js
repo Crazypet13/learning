@@ -6,12 +6,14 @@ module.exports = class Spells {
     armorpen;
     description;
     name;
+    armorpen;
 
-    constructor(name, damage, manaCost, description) {
+    constructor(name, damage, manaCost, description,armorpen) {
         this.description = description;
         this.name = name;
         this.damage = damage;
         this.cost = manaCost;
+        this.armorpen =armorpen;
     }
     getDamage() {
         return this.damage;
@@ -20,12 +22,15 @@ module.exports = class Spells {
         return this.description;
     }
     getCost() {
-        return this.manaCost;
+        return this.cost;
     }
     getName() {
         return this.name;
     }
     getType(){
         throw "not Implemented"
+    }
+    getArmorPen() {
+        return this.armorpen;
     }
 }

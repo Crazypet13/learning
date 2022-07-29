@@ -8,7 +8,7 @@ module.exports = class AiBasic extends AiAbstract{
         }
         getSpell(){
             if (this.#me.getHpPercentNumber() <= 25){
-                return 'hollyFire'
+                return 'HollyFire'
             }else{
                 let pickedOne = Math.floor(Math.random()*4);
                 let spells = this.#me.getSpells();

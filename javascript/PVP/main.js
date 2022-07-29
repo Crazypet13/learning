@@ -8,7 +8,7 @@ let magicSpoon = new DamageSpells('Spoon', 1, 5,'and again and agin and again',6
 let fireBall = new DamageSpells('FireBall', 80, 20,'its a fireball what do you think?', 10);
 let thunderBolt = new DamageSpells('ThunderBolt', 100, 40,'Fry them up',300);
 let fireStorm = new DamageSpells('FireStorm', 50, 30,'melt them',50);
-let hollyFire = new HealingSpells('HollyFire', 30, 15, 100, 'BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!');
+let hollyFire = new HealingSpells('HollyFire', 30, 15,'BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!',0,100);
 
 //index(ui) or main(backend) is the start of the programs :3 <3
 //let bob = new Player('Bob',150,300,50);
@@ -47,26 +47,27 @@ class AreneFight {
         this.inItSpells();
     }
     fight() {
-        let isItEnded = this.#currentRoundNumber <= this.#maxRounds;
-        let someOneDied = 0 < this.player1.getHp() || 0 < this.enemy.getHp()
+        let isItNotEnded = true;
+        let weAreLivingHereTogather = true;
 
-        /*while (isItEnded || someOneDied) {
-            let answer = this.getInput('What do you want to do?')
-            switch (answer) {
-                case 'help':
-                    console.log(this.player1.getSpells())
-                    break;
-                case '':
+        while (isItNotEnded && weAreLivingHereTogather) {
+            console.log(isItNotEnded+"------------------------------"+weAreLivingHereTogather)
+            let roundInProgress = new Round(this.enemy, this.player1, this.#currentRoundNumber);
+            roundInProgress.start();
+            this.#currentRoundNumber ++;
+            isItNotEnded = this.#currentRoundNumber <= this.#maxRounds;
+            weAreLivingHereTogather = 0 < this.player1.getHp() && 0 < this.enemy.getHp() 
             }
+            (this.player1.getHp() === 0)?(console.log("You LOOOOOSSSSEEEE --er")):(console.log("YOUR WINNER :D"));
         }
-        */
+      /*  
         for (let i = 0; i < this.#maxRounds; i++) {
             this.#currentRoundNumber = i + 1;
             let roundInProgress = new Round(this.enemy, this.player1, this.#currentRoundNumber);
-            roundInProgress.start();
-            
+                     roundInProgress.start();
         }
-    }
+       */ 
+    
 
     getInput(question) {
         const readline = require('readline').createInterface({
