@@ -1,8 +1,7 @@
 package PvP.Spells;
-
 import java.util.Objects;
 
-public abstract class AbstractSpell {
+public class Spell {
 
     protected Integer damage;
     protected Integer manaCost;
@@ -10,15 +9,13 @@ public abstract class AbstractSpell {
     protected String description;
     protected String name;
 
-    protected String type;
-
-    private String cica;
+    protected SpellType type;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AbstractSpell that = (AbstractSpell) o;
+        Spell that = (Spell) o;
         return armorPen == that.armorPen && damage.equals(
                 that.damage) && manaCost.equals(
                 that.manaCost) && Objects.equals(description,
@@ -32,16 +29,26 @@ public abstract class AbstractSpell {
                 type);
     }
 
-    public AbstractSpell(Integer damage, Integer manaCost, int armorPen,
-                         String description, String name) {
+    public Spell(Integer damage, Integer manaCost, int armorPen,
+                 String description, String name,SpellType type) {
         this.damage = damage;
         this.manaCost = manaCost;
         this.armorPen = armorPen;
         this.description = description;
         this.name = name;
+        this.type = type;
     }
-    public  AbstractSpell(){
-        
+    public  Spell(){
+        this.damage = 10;
+        this.manaCost = 10;
+        this.armorPen = 10;
+        this.description = "szép";
+        this.name = "cica";
+        this.type = SpellType.HEALING;
+    }
+    public Spell(SpellType type){
+        this();
+        this.type = type;
     }
 
     public Integer getDamage() {
@@ -84,5 +91,10 @@ public abstract class AbstractSpell {
         this.name = name;
     }
 
-    public abstract SpellType getType();
+    public SpellType getType() {
+        return this.type;
+    }
+    public void setType(SpellType type){
+        this.type = type;
+    }
 }

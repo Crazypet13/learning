@@ -19,16 +19,19 @@ public abstract class AbstractCharacter {
     protected Integer currentMana;
     protected Integer armorValue;
 
+    protected SpellBook spellBook;
+
     public AbstractCharacter() {
         this("cica",100,100,10);
     }
-
+     // add confugurable spellbook in the future
     public AbstractCharacter(String name, Integer maxHp, Integer maxMana,
                              Integer armorValue) {
         this.name = name;
         this.maxHp = maxHp;
         this.maxMana = maxMana;
         this.armorValue = armorValue;
+        this.spellBook = new SpellBook();
         try {
             initializer();
         } catch (CharacterInvalidFieldException e) {
@@ -127,4 +130,7 @@ public abstract class AbstractCharacter {
             this.armorValue = armorValue;
         }
     }
+    public  SpellBook getSpellBook(){return this.spellBook;}
+
+
 }
