@@ -28,7 +28,7 @@ public class SpellBook {
         this.spells = spells;
     }
 
-    public ArrayList getSpells(){
+    public ArrayList<Spell> getSpells(){
       return this.spells;
     }
     public void setSpells(ArrayList replaceArray){
