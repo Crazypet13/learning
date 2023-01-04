@@ -41,7 +41,8 @@ public abstract class AbstractCharacter {
 
     private void initializer() throws CharacterInvalidFieldException {
         this.currentHP = this.maxHp;
-        setCurrentMana(getMaxMana());
+        this.currentMana = this.maxMana;
+        //setCurrentMana(getMaxMana());
     }
 
     public String getName() {

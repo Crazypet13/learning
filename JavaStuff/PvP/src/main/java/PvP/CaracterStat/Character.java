@@ -21,7 +21,7 @@ public class Character extends AbstractCharacter {
             }
             throw new CharacterInvalidFieldException("Invalid hp change");
         } else {
-            this.currentHP = getValueWithinLimits(valueToSet, minimumValue, this.maxHp);
+            this.currentHP = getValueWithinLimits(valueToSet, this.minimumValue, this.maxHp);
         }
     }
 
@@ -33,7 +33,7 @@ public class Character extends AbstractCharacter {
             }
             throw new CharacterInvalidFieldException("Invalid mana change");
         } else {
-            this.currentMana = getValueWithinLimits(valueToSet,minimumValue,this.maxMana);
+            this.currentMana = getValueWithinLimits(valueToSet,this.minimumValue,this.maxMana);
         }
 
     }
@@ -49,16 +49,30 @@ public class Character extends AbstractCharacter {
     }
  // kifelé építkezünk hp modosíto (+ - értékekkel ) mana ctrl c / v
 
-    public void modifyCurrentHp (Integer input){
+    public void modifyCurrentHp (Integer damage,Integer armorPen){
         try {
-             if(input >= 0){
-                 setCurrentHP(getCurrentHP()+input);//healing case
+             if(damage >= 0){
+                 setCurrentHP(getCurrentHP()+damage);//healing case
              }else{
-                 Integer x = input + this.armorValue;
-                 if (x < 0){
-                     setCurrentHP(getCurrentHP()+x);
+                 Integer activeArmore = armorPen + this.armorValue;
+                 if (activeArmore < 0){
+                     setCurrentHP(getCurrentHP()+damage);
+                 }else{
+                     setCurrentHP(getCurrentHP()+damage+activeArmore);
                  }
              }
+        } catch (CharacterInvalidFieldException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void modifyCurrentMana (Integer input){
+        try {
+            {
+                if (input < 0){
+                    setCurrentMana(getCurrentMana()+input);
+                }
+            }
         } catch (CharacterInvalidFieldException e) {
             System.out.println(e);
         }

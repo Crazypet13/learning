@@ -16,12 +16,12 @@ public class SpellBook {
     public SpellBook() {
         this.spells = new ArrayList();
 
-        this.spells.add(new Spell(1, 5, 600, "and again and agin and again", "Spoon", SpellType.DAMAGE));
-        this.spells.add(new Spell(80, 20, 10, "its a fireball what do you think?", "FireBall", SpellType.DAMAGE));
-        this.spells.add(new Spell(100, 40, 300, "Fry them up", "ThunderBolt", SpellType.DAMAGE));
-        this.spells.add(new Spell(150, 30, 50, "melt them", "FireStorm", SpellType.DAMAGE));
+        this.spells.add(new Spell(1, 0, 600, "and again and agin and again", "Spoon", SpellType.DAMAGE));
+        this.spells.add(new Spell(50, 20, 10, "its a fireball what do you think?", "FireBall", SpellType.DAMAGE));
+        this.spells.add(new Spell(75, 40, 300, "Fry them up", "ThunderBolt", SpellType.DAMAGE));
+        this.spells.add(new Spell(90, 300, 50, "melt them", "FireStorm", SpellType.DAMAGE));
         this.spells.add(new Spell(100, 15, 0, "BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!", "HollyFire", SpellType.HEALING));
-        this.spells.add(new Spell(5000, 1, 6000, "ONLY ONEC", "BIG Spoon", SpellType.DAMAGE));
+        this.spells.add(new Spell(2, 1, 6000, "ONLY ONEC", "BIG Spoon", SpellType.DAMAGE));
     }
 
     public SpellBook(ArrayList spells) {
