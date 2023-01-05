@@ -16,7 +16,7 @@ public class InputAction extends Action{
       ArrayList<Spell> spells = character.getSpellBook().getSpells();
 
         for (int i = 0; i < spells.size(); i++) {
-            System.out.println("("+(i+1)+")  "+spells.get(i).getName());
+            System.out.println("("+(i+1)+")  "+spells.get(i).getName()+"  "+spells.get(i).getDamage()+"   "+spells.get(i).getType());
         }
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         System.out.println("What do you want to do?,press the number consistent with it");

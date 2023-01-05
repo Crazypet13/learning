@@ -1,0 +1,14 @@
+ /*some method to empty out the spells what are to much mana to use
+  get an array copy the character spell book for cycle used to check your
+  current mana and just leave the correct spells in or make a new array
+  and return that what the Ai can use*/
+
+    Ai calibration id-4 (ai out of mana):
+    spellBook = array;
+    goodBook = [];
+    for (i = 0,i < spellBook.size(),i++);
+    {if(charater.getCurrentMana=>spellbook.get(i).getmanacost);{
+    push.goodBook(spellbook,get(i);}
+    }
+
+ai just useing good book not spell book so it only using what he can

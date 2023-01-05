@@ -22,7 +22,9 @@ public class SpellBook {
         this.spells.add(new Spell(90, 300, 50, "melt them", "FireStorm", SpellType.DAMAGE));
         this.spells.add(new Spell(100, 15, 0, "BURN THE HERETIC IN HOLLY FLAMY FOR THE NAME OF THE EMPEROR!", "HollyFire", SpellType.HEALING));
         this.spells.add(new Spell(2, 1, 6000, "ONLY ONEC", "BIG Spoon", SpellType.DAMAGE));
+        this.spells.add(new Spell(69,69,0,"you know what","Heh",SpellType.DAMAGE));
     }
+
 
     public SpellBook(ArrayList spells) {
         this.spells = spells;
